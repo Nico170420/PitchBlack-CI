@@ -32,7 +32,7 @@ DeviceTree="https://github.com/Nico170420/android_device_samsung_z3s.git"       
 DTBranch="pbrp"                                                                                     #<--- Set the DT Branch Name here
 
 # Initialize Repo Manifest (SHRP/TWRP/PBRP)
-repo init -u ${REPO} -b ${Bramch}
+repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
 
 # Sync Repo
 repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
