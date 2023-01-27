@@ -1,0 +1,34 @@
+env:
+    # OrangeFox Sync Repository
+    FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
+
+    # Config
+    CONFIG: config.sh
+
+    # Telegram
+    TG_CHAT_ID: ENCRYPTED[34d7d5d523e486dbb22ba7bb0003775d337caa0de162fc5082aa0c00b04651313c341ab79a9ee6f45c9293d20867ed2b]
+    TG_TOKEN: ENCRYPTED[8037881a21deecb223f3ef0af1d62d32c39a602b7f74aa2e47a771d67c1c7595f9925722ea99d22bcb3f3cd070e7beb1]
+
+    # Cirrus Specific Vars (Do *NOT* Change)
+    CIRRUS_SHELL: bash
+
+task:
+  name: "Recovery Build"
+  timeout_in: 120m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 8
+      memory: 20G
+
+  Checks_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/checks.sh)"
+
+  Sync_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/sync.sh)"
+
+  Build_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build.sh)"
+
+  Upload_script:
+      - export TIMEOUT=43200 # Link timeout (in minutes)
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload.sh)"
