@@ -16,7 +16,7 @@
 # limitations under the License.
 
 # Variables
-Device="z3s"                                                                                         #<--- Set Device Codename here
+Device="c2s"                                                                                         #<--- Set Device Codename here
 TARGET="pbrp"                                                                                        #<--- Set Target (recoveryimage or pbrp)
 
 # A Function to Send Posts to Telegram
