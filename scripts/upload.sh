@@ -24,7 +24,7 @@ telegram_message() {
 }
 
 # Variables
-Device="c2s"                    #<--- Set Device Codename here
+Device="z3s"                    #<--- Set Device Codename here
 Files="PBRP*.zip"               #<--- Set Files to upload here (SHRP*.zip, PBRP*.zip, recovery.img)
 
 # Display a message
@@ -62,7 +62,7 @@ PitchBlack Recovery CI
 ✅ Build Completed Successfully!
 
 📱 Device: "${Device}"
-🖥 Build System: "${FOX_BRANCH}"
+🖥 Build System: "PBRP 4.0"
 ⬇️ Download Link: <a href=\"${DL_LINK}\">Here</a>
 📅 Date: "$(date +%d\ %B\ %Y)"
 ⏱ Time: "$(date +%T)"
