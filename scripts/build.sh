@@ -16,7 +16,7 @@
 # limitations under the License.
 
 # Variables
-Device="c2s"                                                                                         #<--- Set Device Codename here
+Device="z3s"                                                                                         #<--- Set Device Codename here
 TARGET="pbrp"                                                                                        #<--- Set Target (recoveryimage or pbrp)
 
 # A Function to Send Posts to Telegram
@@ -36,7 +36,7 @@ PitchBlack Recovery CI
 ✔️ The Build has been Triggered!
 
 📱 Device: "${DEVICE}"
-🖥 Build System: "${PB_BRANCH}"
+🖥 Build System: "PBRP 4.0"
 🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
 " > tg.html
 
