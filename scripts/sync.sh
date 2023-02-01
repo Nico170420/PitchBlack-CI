@@ -28,8 +28,8 @@ REPO="https://github.com/PitchBlackRecoveryProject/manifest_pb"                 
 Branch="android-12.1"                                                                                  #<--- Set Source Branch here (SHRP-12.1, android-12.1 for PBRP or twrp-12.1)
 Device="z3s"                                                                                         #<--- Set Device Codename here
 OEM="samsung"                                                                                        #<--- Set Device Manufactor here
-DeviceTree="https://github.com/Nico170420/android_device_samsung_z3s.git"                            #<--- Put Device Tree Link here
-DTBranch="pbrp"                                                                                     #<--- Set the DT Branch Name here
+DeviceTree="https://github.com/PitchBlackRecoveryProject/android_device_samsung_z3s-pbrp.git"                            #<--- Put Device Tree Link here
+DTBranch="android-12.1"                                                                                     #<--- Set the DT Branch Name here
 
 # Initialize Repo Manifest (SHRP/TWRP/PBRP)
 repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
