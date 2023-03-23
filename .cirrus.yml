@@ -17,8 +17,8 @@ task:
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 8
-      memory: 20G
+      cpu: 4
+      memory: 16G
 
   Checks_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/checks.sh)"
