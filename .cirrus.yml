@@ -27,9 +27,9 @@ task:
   Build_Z3S_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_z3s.sh)"
 
-  Upload_script:
+  Upload_Z3S_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_z3s.sh)"
 
   Build_P3S_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_p3s.sh)"
