@@ -35,7 +35,7 @@ PitchBlack Recovery CI
 
 ✔️ The Build has been Triggered!
 
-📱 Device: "${DEVICE}"
+📱 Device: "${Device}"
 🖥 Build System: "PBRP 4.0"
 🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
 " > tg.html
