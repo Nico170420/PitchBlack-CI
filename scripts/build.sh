@@ -50,6 +50,9 @@ echo " "
 export ALLOW_MISSING_DEPENDENCIES=true
 lunch twrp_${Device}-eng
 
+# Set Build Status
+export TEST_BUILD=true
+
 # Build ZIP/IMG File
 mka -j$(nproc) ${TARGET}
 
