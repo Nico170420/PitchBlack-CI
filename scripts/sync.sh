@@ -29,7 +29,7 @@ Branch="android-12.1"                                                           
 Device="p3s"                                                                                         #<--- Set Device Codename here
 OEM="samsung"                                                                                        #<--- Set Device Manufactor here
 DeviceTree="https://github.com/The-Unbeyond-Team/android_device_samsung_p3s.git"                            #<--- Put Device Tree Link here
-DTBranch="android-12.1"                                                                                     #<--- Set the DT Branch Name here
+DTBranch="pbrp"                                                                                     #<--- Set the DT Branch Name here
 
 # Initialize Repo Manifest (SHRP/TWRP/PBRP)
 repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
