@@ -74,5 +74,8 @@ telegram_message "$TG_TEXT"
 
 echo " "
 
+#Delete out Folder
+rm -r ./out
+
 # Exit
 exit 0

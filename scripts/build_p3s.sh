@@ -48,10 +48,8 @@ echo " "
 # Setup the Build Enviroment
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
-lunch twrp_${Device}-eng
-
-# Set Build Status
 export TEST_BUILD=true
+lunch twrp_${Device}-eng
 
 # Build ZIP/IMG File
 mka -j$(nproc) ${TARGET}

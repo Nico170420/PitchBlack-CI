@@ -1,6 +1,4 @@
 env:
-    # OrangeFox Sync Repository
-    FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Config
     CONFIG: config.sh
@@ -18,7 +16,7 @@ task:
   container:
       image: ghcr.io/sushrut1101/docker:arch
       cpu: 5
-      memory: 16G
+      memory: 20G
 
   Checks_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/checks.sh)"
@@ -26,8 +24,15 @@ task:
   Sync_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/sync.sh)"
 
-  Build_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build.sh)"
+  Build_Z3S_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_z3s.sh)"
+
+  Upload_script:
+      - export TIMEOUT=43200 # Link timeout (in minutes)
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload.sh)"
+
+  Build_P3S_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_p3s.sh)"
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
