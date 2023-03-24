@@ -34,6 +34,13 @@ task:
   Build_P3S_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_p3s.sh)"
 
-  Upload_script:
+  Upload_P3S_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_p3s.sh)"
+
+  Build_B0S_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/build_b0s.sh)"
+
+  Upload_B0S_script:
+      - export TIMEOUT=43200 # Link timeout (in minutes)
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Nico170420/PitchBlack-CI/pb/scripts/upload_b0s.sh)"
