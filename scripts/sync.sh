@@ -41,7 +41,7 @@ DeviceTree3="https://github.com/Nico170420/android_device_samsung_b0s.git"      
 DTBranch3="pbrp"
 
 # Initialize Repo Manifest (SHRP/TWRP/PBRP)
-repo init -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
+repo init --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-12.1
 
 # Sync Repo
 repo sync -j$(nproc) --force-sync --no-clone-bundle --no-tags
